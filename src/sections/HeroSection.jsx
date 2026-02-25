@@ -48,7 +48,7 @@ const SocialIcons = ({ className = '' }) => (
     </div>
 );
 
-const HeroSection = ({ onOpenDialog }) => {
+const HeroSection = ({ onOpenDialog, onOpenSchedule }) => {
     return (
         <section id="home" className="section-padding min-h-[90vh] flex flex-col justify-center pt-[100px] bg-transparent text-primary">
             <div className="max-w-[1200px] w-full mx-auto">
@@ -133,7 +133,7 @@ const HeroSection = ({ onOpenDialog }) => {
                         </p>
 
                         <div className="flex flex-wrap gap-2 md:gap-4">
-                            <Button onClick={onOpenDialog} variant="primary">
+                            <Button onClick={onOpenSchedule} variant="primary">
                                 Schedule Meeting
                             </Button>
                             <Button onClick={() => window.open('https://drive.google.com/file/d/1GMQH71fa3Vv8PP7yBm1luorfkGIuOruG/view?usp=sharing', '_blank')} variant="outline">

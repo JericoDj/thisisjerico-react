@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import ContactDialog from './components/ContactDialog';
+import ScheduleDialog from './components/ScheduleDialog';
 
 import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
@@ -14,6 +15,7 @@ import logo from './assets/JericoWebLogo.png';
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  const [isScheduleDialogOpen, setIsScheduleDialogOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -27,6 +29,7 @@ function App() {
       if (e.key === 'Escape') {
         setIsSidebarOpen(false);
         setIsContactDialogOpen(false);
+        setIsScheduleDialogOpen(false);
       }
     };
     window.addEventListener('keydown', handleKey);
@@ -35,11 +38,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#f8f5f0] font-sans text-primary">
-      <Navbar onOpenSidebar={() => setIsSidebarOpen(true)} onOpenDialog={() => setIsContactDialogOpen(true)} />
-      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} onOpenDialog={() => setIsContactDialogOpen(true)} />
+      <Navbar onOpenSidebar={() => setIsSidebarOpen(true)} onOpenDialog={() => setIsContactDialogOpen(true)} onOpenSchedule={() => setIsScheduleDialogOpen(true)} />
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} onOpenDialog={() => setIsContactDialogOpen(true)} onOpenSchedule={() => setIsScheduleDialogOpen(true)} />
 
       <main>
-        <HeroSection onOpenDialog={() => setIsContactDialogOpen(true)} />
+        <HeroSection onOpenDialog={() => setIsContactDialogOpen(true)} onOpenSchedule={() => setIsScheduleDialogOpen(true)} />
         <AboutSection />
         <ServicesSection />
         <div className="section-divider"></div>
@@ -120,6 +123,10 @@ function App() {
       <ContactDialog
         isOpen={isContactDialogOpen}
         onClose={() => setIsContactDialogOpen(false)}
+      />
+      <ScheduleDialog
+        isOpen={isScheduleDialogOpen}
+        onClose={() => setIsScheduleDialogOpen(false)}
       />
 
       {/* Floating Scroll-to-Top Button */}

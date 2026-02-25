@@ -18,7 +18,7 @@ const scrollTo = (id, onClose) => {
     }, 300); // small delay lets drawer close before scrolling
 };
 
-const Sidebar = ({ isOpen, onClose, onOpenDialog }) => {
+const Sidebar = ({ isOpen, onClose, onOpenDialog, onOpenSchedule }) => {
     const [activeSection, setActiveSection] = useState('');
 
     useEffect(() => {
@@ -86,7 +86,7 @@ const Sidebar = ({ isOpen, onClose, onOpenDialog }) => {
                         </nav>
 
                         <div className="mt-auto">
-                            <Button className="w-full" onClick={() => { onClose(); onOpenDialog(); }}>
+                            <Button className="w-full !text-white" onClick={() => { onClose(); onOpenSchedule(); }}>
                                 Schedule Meeting
                             </Button>
                             <div className="mt-6 flex flex-col gap-2 text-sm text-gray-500 border-t border-gray-100 pt-5">

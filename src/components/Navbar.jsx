@@ -15,7 +15,7 @@ const scrollTo = (id) => {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
 };
 
-const Navbar = ({ onOpenSidebar, onOpenDialog }) => {
+const Navbar = ({ onOpenSidebar, onOpenDialog, onOpenSchedule }) => {
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('');
 
