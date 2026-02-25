@@ -103,8 +103,8 @@ function App() {
                 </a>
               </li>
               <li>
-                <a href="tel:+12345678900" className="hover:text-[#FFB000] transition-colors">
-                  +1 (234) 567-8900
+                <a href="tel:+639760143260" className="hover:text-[#FFB000] transition-colors">
+                  +63 976 014 3260
                 </a>
               </li>
               <li>Philippines</li>
