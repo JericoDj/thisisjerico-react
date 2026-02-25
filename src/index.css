@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-[#f8f5f0] text-gray-800 font-sans leading-relaxed overflow-x-hidden m-0 p-0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-bold text-gray-800 leading-tight;
+  }
+}
+
+@layer components {
+  .section-divider {
+    @apply w-full h-[1px] bg-black/10 my-16;
+  }
+
+  .section-padding {
+    @apply py-16 px-6 md:py-24 md:px-16 lg:py-32 lg:px-[10vw];
+  }
+
+  .glass-panel {
+    @apply bg-white border border-gray-100 rounded-2xl;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+}
