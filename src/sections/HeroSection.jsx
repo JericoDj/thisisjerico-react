@@ -136,7 +136,7 @@ const HeroSection = ({ onOpenDialog, onOpenSchedule }) => {
                             <Button onClick={onOpenSchedule} variant="primary">
                                 Schedule Meeting
                             </Button>
-                            <Button onClick={() => window.open('https://drive.google.com/file/d/1GMQH71fa3Vv8PP7yBm1luorfkGIuOruG/view?usp=sharing', '_blank')} variant="outline">
+                            <Button onClick={() => window.open('https://drive.google.com/file/d/18ar9QS3ufmxvsrznsy_K1Ve3GqACsl8J/view?usp=sharing', '_blank')} variant="outline">
                                 Download CV
                             </Button>
                         </div>

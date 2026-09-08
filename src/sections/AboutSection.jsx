@@ -81,7 +81,7 @@ const AboutSection = () => {
                         </div>
                     </div>
 
-                    <a href="https://drive.google.com/file/d/1GMQH71fa3Vv8PP7yBm1luorfkGIuOruG/view?usp=sharing" target="_blank" rel="noreferrer" className="inline-block">
+                    <a href="https://drive.google.com/file/d/18ar9QS3ufmxvsrznsy_K1Ve3GqACsl8J/view?usp=sharing" target="_blank" rel="noreferrer" className="inline-block">
                         <Button variant="outline">
                             <FaDownload />
                             Download CV
